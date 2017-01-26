@@ -6,4 +6,8 @@ router.get('/', function(req, res, next) {
   res.redirect('/users');
 });
 
+router.get('/new', function(req, res, next) {
+  res.redirect('/users/new')
+})
+
 module.exports = router;
