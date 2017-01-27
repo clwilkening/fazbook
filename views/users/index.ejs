@@ -10,13 +10,9 @@
     <a href="/users/new"> Create a user </a>
     <% users.forEach(function(user) { %>
       <div>
-        <span><%= user.email %></span>
         <span><%= user.firstName %></span>
         <span><%= user.lastName %></span>
-        <span><%= user.dob %></span>
-        <form action='<%= `/users/${user.id}?_method=DELETE` %>' method='POST'>
-          <button type="submit">X</button>
-        </form>
+        <a href='<%= `/users/${user.id}/show` %> '>Show</a>
       </div>
     <% }); %>
 

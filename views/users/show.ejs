@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= user.firstName %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+
+    <h1>Welcome to fazbook</h1>
+      <div>
+        <span><%= user.email %></span>
+        <span><%= user.firstName %></span>
+        <span><%= user.lastName %></span>
+        <span><%= user.dob %></span>
+        <form action='<%= `/users/${user.id}?_method=DELETE` %>' method='POST'>
+          <button type="submit">X</button>
+        </form>
+        <a href='<%= `/users/${user.id}/edit` %> '>Edit User</a>
+        <a href='<%= `/users/` %> '>Show All</a>
+      </div>
+  </body>
+</html>
